@@ -6,6 +6,7 @@ class Node{
    }
 }
 
+// class to create List
 class singlyLinkedList{
    constructor(){
 
@@ -34,6 +35,39 @@ class singlyLinkedList{
       this.length++;               // for every push the length will be incremented
       return this;                 // return new list 
    }
+   
+   // Pop operation
+   
+   pop(){ //doesnot take arg since it will always remove the last node
+
+        if(!this.head) return undefined; // checking is the head is not there, if yes return undefined
+
+        // previous will be the new tail (2nd last node of the list)
+        //create two variables current & pre to the first node of the list
+        var current = this.head; 
+        var previous = current;
+
+        while(current.next) {   // loop until the current node of the list is not a null(points nothing)
+            
+            // assign the current to the previous and point the current to the next node
+            previous = current; 
+            current = current.next; 
+        }
+        
+        // new tail will the previous(2nd last node of the list) and it will be points to null; also decrement the length
+        this.tail = previous;   
+        this.tail.next = null;
+        this.length--;
+
+        // after popping checking if the list is empty to assign the head and tail to null(as fresh)
+        if(this.length === 0) {
+            this.head = null;
+            this.tail = null;
+        }
+
+        // return the popped node(last node of the list)
+        return current;
+    }
 }
 
 let list = new singlyLinkedList();
