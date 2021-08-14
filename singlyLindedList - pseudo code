@@ -15,4 +15,10 @@
 6. Decrement the length of the list.
 7. Return the value of the node removed.
 
-
+#SHIFT
+1. Define a function named shift with no arg passed (since it will always remove the first node).
+2. If there are no nodes, return undefined.
+3. Store the current head property in a varaible.
+4. Set the head property to be the current head's next property.
+5. Decrement the length by 1.
+6. Return the value of the node removed.
