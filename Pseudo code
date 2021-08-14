@@ -1,0 +1,18 @@
+#PUSH
+1. Define a function named push should accept a value.
+2. Create a new node using the value passed to the function.
+3. If there is no head property in the list, set the head and tail to be the newly created node.
+4. Else, set the next property of the tail to be the new node and set the tail property to be the newly created node.
+5. Increament the length by one.
+6. Return the list.
+
+#POP
+1. Define a function named pop with no arg passed (since it will always remove the last node in the list).
+2. If there is no nodes in the list, return undefined.
+3. Loop through the list until you reach the tail.
+4. Set the next property of the 2nd to last node to be null.
+5. Set the tail to be the 2nd to last node.
+6. Decrement the length of the list.
+7. Return the value of the node removed.
+
+
