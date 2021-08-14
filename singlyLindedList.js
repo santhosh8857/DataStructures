@@ -115,3 +115,8 @@ class singlyLinkedList{
 
 let list = new singlyLinkedList();
 // list.push(88);
+// list.push(98);
+// list.push(57);
+// list.pop();
+// list.shift();
+// list.unshift(12);
