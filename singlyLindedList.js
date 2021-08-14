@@ -11,7 +11,6 @@ class singlyLinkedList{
    constructor(){
 
       //while creating a new list assign head and tail as null and length as 0 
-
       this.head = null; 
       this.tail = null;
       this.length = 0;
@@ -83,11 +82,36 @@ class singlyLinkedList{
       // if there is no element after removing the first node then assign the tail as null
       if(this.length === 0) {
          this.tail = null;
+      }
+   
+      // return the removed item   
+      return currentHead;
    }
    
-   // return the removed item   
-   return currentHead;
-}
+   // Unshift operation
+   
+   unshift(val){
+      
+      // creating a new node by Node class
+      let newNode = new Node(val);
+      
+      // if the head is not present in the list (i.e head is null) point the head and tail to the new Node
+      
+      if(!this.head) {
+         this.head = newNode;
+         this.tail = this.head;
+      } else {  
+         newNode.next = this.head; // the newly created node's next pointed to the current head
+         this.head = newNode;      // the current head is delegated to the newly created node.
+      }
+      
+      // increment the length by 1
+      this.length++;
+      
+      // return the list
+      return this;
+      
+   }
 
 let list = new singlyLinkedList();
 // list.push(88);
