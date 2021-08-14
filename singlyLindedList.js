@@ -67,7 +67,26 @@ class singlyLinkedList{
 
         // return the popped node(last node of the list)
         return current;
-    }
+   }
+   
+   // Shift operation
+   
+   shift(){
+      
+      if(!this.head) return undefined; // checking is the head is not there, if yes return undefined
+      
+      // assign the head of the list to the currentHead variable & point the immediate node as the new head; also decrement the length
+      var currentHead = this.head;    
+      this.head = currentHead.next;
+      this.length--;
+      
+      // if there is no element after removing the first node then assign the tail as null
+      if(this.length === 0) {
+         this.tail = null;
+   }
+   
+   // return the removed item   
+   return currentHead;
 }
 
 let list = new singlyLinkedList();
