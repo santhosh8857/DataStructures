@@ -111,6 +111,25 @@ class singlyLinkedList{
       // return the list
       return this;
       
+   // Get Operation
+      
+   get(index) {
+      
+      // index should be greater than zero and lesser than or equal to length of the list  
+      if(index < 0 || index >= length) return undefined;
+      
+      let current = this.head;   // assign the head property to the current 
+      let counter = 0;           // have counter to track the traversing the list
+      
+      while(current !== index) { // loop should terminate when the current and index gets equal
+         
+         // Update the current to the next node and increment the counter
+         current = current.next; 
+         counter++;             
+      }
+      return current; // which have the desired node
+   }
+     
    }
 
 let list = new singlyLinkedList();
@@ -120,3 +139,4 @@ let list = new singlyLinkedList();
 // list.pop();
 // list.shift();
 // list.unshift(12);
+// list.get(2);
