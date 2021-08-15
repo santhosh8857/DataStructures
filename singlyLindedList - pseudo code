@@ -3,7 +3,7 @@
 2. Create a new node using the value passed to the function.
 3. If there is no head property in the list, set the head and tail to be the newly created node.
 4. Else, set the next property of the tail to be the new node and set the tail property to be the newly created node.
-5. Increament the length by one.
+5. Increament the length by 1.
 6. Return the list.
 
 #POP
@@ -12,7 +12,7 @@
 3. Loop through the list until you reach the tail.
 4. Set the next property of the 2nd to last node to be null.
 5. Set the tail to be the 2nd to last node.
-6. Decrement the length of the list.
+6. Decrement the length by 1.
 7. Return the value of the node removed.
 
 #SHIFT
@@ -22,3 +22,12 @@
 4. Set the head property to be the current head's next property.
 5. Decrement the length by 1.
 6. Return the value of the node removed.
+
+#UNSHIFT
+1. Define a function named unshift which accepts a value.
+2. Create a new node using the value passed to the function.
+3. If there is no head property in the list, set the head and tail to be the newly created node.
+4. Else, set the newly created node's next property to be the current head property on the list.
+5. Set the head property in the list to be that newly created node.
+6. Increment the length by 1.
+7. Return the list.
