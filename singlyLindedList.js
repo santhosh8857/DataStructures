@@ -129,8 +129,20 @@ class singlyLinkedList{
       }
       return current; // which have the desired node
    }
-     
+   set(index, val) {
+      
+      // using the get function to find the specific node and assign it to the varaible
+      let foundNode = this.get(index);
+      
+      // check is there any Node then return false; 
+      
+      if(foundNode) {
+         foundNode.val = val; // update the founded value to the passed value
+         return true;
+      }
+      return false;
    }
+}
 
 let list = new singlyLinkedList();
 // list.push(88);
